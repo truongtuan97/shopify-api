@@ -1,0 +1,2 @@
+class GiftCardUsed < ApplicationRecord
+end

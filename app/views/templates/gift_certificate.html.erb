@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift card email template</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      color: #ffffff;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-family: Arial, Gotham, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 130%;
+      letter-spacing: -0.2px;
+      -webkit-font-smoothing: antialiased;
+      background-color: #000000;
+    }
+
+    .colors {
+      color: #00B188;
+    }
+
+    .line {
+      width: 100px;
+      height: 1px;
+      background-color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+<div id="content-email" style="width: 1100px; margin: 0 auto; padding-top: 20px; padding-bottom: 0px;">
+  <center style="padding: 30px; min-height:753px;">
+    <div>
+      <%= image_tag(image_path("luckyyou-01.png"), width: "280") %>
+    </div>
+    <p><strong>You’ve been gifted a 12-month LES MILLSTM On Demand subscription.<br/>This means you can access LES MILLS workouts anytime, anywhere –<br/>all you need to do is redeem your subscription, and you can do it right now!</strong></p>
+    <p class="line"></p>
+    <p>Attached is your gift certi cate with your unique activation code,
+      <br/>you will need to use this and follow the below steps:</p>
+    <div>
+      <p><strong class="colors">1.</strong> Go to www.lesmills.com/ondemand, and click on FREE TRIAL or SIGN UP<br />printed on t gift certi cate and press APPLY</p>
+      <p><strong class="colors">2.</strong> On the Checkout page, please copy and paste the ACTIVATION CODE</p>
+      <p><strong class="colors">3.</strong> Complete the registration process</p>
+      <p><strong class="colors">4.</strong> Your 12-month subscription will be instantly loaded onto your account</p>
+      <p><strong class="colors">5.</strong> The  nal step is to grab a water bottle and get ready to work out!</p>
+    </div>
+    <p class="line"></p>
+    <p>If you have any questions contact us at any time at support@lesmillsondemand.com.</p>
+    <p>It’s also worth noting that On Demand subscriptions operate on monthly cycles. Once you’ve created your subscription
+      <br/>you can check the remaining balance on your activation code at any stage under the My Account section.</p>
+    <div style="margin-top: 30px; margin-bottom: 33px;">
+      <a href="https://www.lesmills.com/ondemand/">
+        <%= image_tag(image_path("logo.png"), width: "130") %>
+      </a>
+    </div>
+  </center>
+  <div style="overflow: hidden;">
+    <div class="left" style="width: 60%; float: left; max-height: 773px; overflow: hidden;">
+      <%= image_tag(image_path("banner.jpg"), style: "width:100%; float: left;") %>
+    </div>
+    <div class="right" style="width: 38%; float: left;">
+      <div style="padding: 30px 30px 0;">
+        <div>
+          <%= image_tag(image_path("YourGifOfFitness-01.png"), width: "280") %>
+        </div>
+        <p>This voucher entitles you to 12 months of LES MILLSTM On Demand. With access to the LES MILLS On Demand streaming service you can work out anytime, anywhere.</p>
+        <p>There’s a library of proven workouts to choose from, cardio, HIIT, yoga, dance, martial arts, strength training and more.</p>
+        <p>Use the code below to activate your 12-month LES MILLS On Demand subscription at lesmillsondemand.com</p>
+        <p><strong class="colors" style="font-size: 16px;">ACTIVATION CODE:</strong></p>
+        <p style="text-transform: uppercase; font-size: 150%;"><strong><%= gift_card_code %></strong></p>
+        <div style="margin-top: 30px; margin-bottom: 20px;">
+          <a href="https://www.lesmills.com/ondemand/">
+            <%= image_tag(image_path("logo.png"), width: "130") %>
+          </a>
+        </div>
+        <p style="line-height: 110%;">
+          <small style="font-size: 75%;">In order to redeem this gift code at www.lesmillsondemand.com for 12 months free access to LES MILLS On Demand you must(i) be over 18, (ii) agree to the LES MILLS On Demand Terms and Conditions and Privacy Policy, and, (iii) subscribe before the end of 2017. Your gift subscription will automatically expire 12 months from the date that you activate your gift subscription. The gift code can only be used once, is not transferable for cash or other discounts, cannot be used in conjunction with any other offer and will expire at the end of 2017. There are no refunds or credits for any partially used gift subscriptions, unwatched programs, if you cancel your gift subscription, or fail to redeem the gift code before the end of 2017.
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+
+</html>

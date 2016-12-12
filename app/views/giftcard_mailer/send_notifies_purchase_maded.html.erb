@@ -1,0 +1,18 @@
+<h1>Purchase have been made includes:</h1>
+<div>
+  <span>Created at: <%= @p_created_at %></span>
+  <span>Processed at: <%= @p_processed_at %></span>
+  <span>Created from: <%= @p_created_from %></span>
+  <ul>Product and quantities
+    <% @name_quantities.each do |li| %>
+      <li>
+        <span><%= li[:name] %>: <%= li[:quantity] %></span>
+      </li>
+    <% end %>
+  </ul>
+  <span>Total cost of shopping cart: <%= @total_line_items_price %></span>
+  <span>Customer name: <%= @customer_name %></span>
+  <span>Customer address: <%= @customer_address %></span>
+  <span>Customer email: <%= @customer_email %></span>
+  <span>Customer phone: <%= @customer_phone %></span>
+</div>

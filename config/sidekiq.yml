@@ -1,0 +1,7 @@
+:logfile: ./log/sidekiq.log
+:concurrency: 1
+:queues:
+  - default
+  - mailers
+
+  - shopify-api_mailers

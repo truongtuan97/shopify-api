@@ -1,0 +1,17 @@
+core: &core
+  adapter: postgresql
+  host: 192.168.1.20
+  #host: localhost
+  encoding: unicode
+  min_messages: warning
+  pool: 5
+
+development: &dev
+  <<: *core
+  database: shopify_api
+  username: postgres
+  password: postgres
+  #password: Texo@8899
+
+staging:
+  <<: *dev

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  GiftCardCode: MyString
+  Price: 1
+
+two:
+  GiftCardCode: MyString
+  Price: 1

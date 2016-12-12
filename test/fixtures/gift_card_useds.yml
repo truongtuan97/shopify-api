@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  GiftCardCode: MyString
+  Email: MyString
+  TimeSendEmail: 2016-11-22 12:06:41
+
+two:
+  GiftCardCode: MyString
+  Email: MyString
+  TimeSendEmail: 2016-11-22 12:06:41
