@@ -25,7 +25,7 @@ class GiftcardMailer < ApplicationMailer
       file << pdf
     end
 
-    attachments['gift_card_content.pdf'] = File.read(file_name)
+    attachments['LES MILLS On Demand - Gift Certificate with Activation Code.pdf'] = File.read(file_name)
     mail to: @client.email, subject: "Thanks for your buying gift card."
   end
 
