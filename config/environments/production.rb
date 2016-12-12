@@ -59,7 +59,7 @@ Rails.application.configure do
       :port                 => 587,
       :user_name            => "smtp.relay@lesmills.com",
       :password             => "Office365",
-      :authentication       => "plain",
+      :authentication       => "login",
       :enable_starttls_auto => true
   }
   config.action_mailer.perform_caching = false
