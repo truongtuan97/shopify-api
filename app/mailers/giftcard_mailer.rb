@@ -7,7 +7,7 @@ class GiftcardMailer < ApplicationMailer
     @client.gift_card_code = gift_card_code
     @client.price = price_gift_card
     @client.first_name = first_name
-    @client.order_id = order_id
+    @order_id = order_id
 
     file_name = Rails.root.join('pdfs', "#{email}-#{((Time.now).to_i).to_s}.pdf")
 

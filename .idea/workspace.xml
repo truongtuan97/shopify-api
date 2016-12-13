@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17983af2-952d-4f34-a41d-33d68a79965c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/shopify_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/shopify_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/giftcard_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/giftcard_mailer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb" afterPath="$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/gift_certificate.html.erb" afterPath="$PROJECT_DIR$/app/views/templates/gift_certificate.html.erb" />
     </list>
     <ignored path="Shopify-API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="giftcard_mailer.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="giftcard_mailer.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mailers/giftcard_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="323">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -53,8 +50,8 @@
       <file leaf-file-name="shopify_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/shopify_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="51" />
+            <state relative-caret-position="102">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_gift_card_email.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="send_gift_card_email.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="196" column="54" selection-start-line="196" selection-start-column="54" selection-end-line="196" selection-end-column="54" />
+            <state relative-caret-position="238">
+              <caret line="206" column="51" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -125,9 +122,9 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/views/templates/gift_certificate.html.erb" />
-        <option value="$PROJECT_DIR$/app/mailers/giftcard_mailer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/shopify_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb" />
+        <option value="$PROJECT_DIR$/app/mailers/giftcard_mailer.rb" />
       </list>
     </option>
   </component>
@@ -569,12 +566,12 @@
       <workItem from="1481251367861" duration="913000" />
       <workItem from="1481256076804" duration="6887000" />
       <workItem from="1481510260876" duration="8640000" />
-      <workItem from="1481623117545" duration="686000" />
+      <workItem from="1481623117545" duration="1231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106963000" />
+    <option name="totallyTimeSpent" value="107508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -965,26 +962,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="206" column="51" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/shopify_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="51" />
+        <state relative-caret-position="102">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/giftcard_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="196" column="54" selection-start-line="196" selection-start-column="54" selection-end-line="196" selection-end-column="54" />
+        <state relative-caret-position="323">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding />
         </state>
       </provider>
