@@ -1,12 +1,13 @@
 class GiftcardMailer < ApplicationMailer
   default from: 'support@lesmillsondemand.com'
 
-  def send_gift_card_email(email, gift_card_code, price_gift_card, first_name, last_name)
+  def send_gift_card_email(email, gift_card_code, price_gift_card, first_name, last_name, order_id)
     @client = Client.new
     @client.email = email
     @client.gift_card_code = gift_card_code
     @client.price = price_gift_card
     @client.first_name = first_name
+    @client.order_id = order_id
 
     file_name = Rails.root.join('pdfs', "#{email}-#{((Time.now).to_i).to_s}.pdf")
 

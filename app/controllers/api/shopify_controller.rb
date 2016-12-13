@@ -38,7 +38,8 @@ class Api::ShopifyController < ApplicationController
             #send email notify empty gift card
             arr_gift_cards = GiftCard.where({ :used => false, :price => price_gift_card })
             if arr_gift_cards.present? && arr_gift_cards.length < 50
-              GiftcardMailer.send_notifies_gift_card_empty("quoc.nguyen@texodesign.com", arr_gift_cards.length, price_gift_card).deliver_later
+              GiftcardMailer.send_notifies_gift_card_empty("quoc.nguyen@texodesign.com", arr_gift_cards.length,
+                                                           price_gift_card).deliver_later
             end
 
             (1..quantity).each do
@@ -46,7 +47,12 @@ class Api::ShopifyController < ApplicationController
               if giftcard.present?
                 first_name = params[:customer][:first_name]
                 last_name = params[:customer][:last_name]
-                GiftcardMailer.send_gift_card_email(params[:email], giftcard.gift_card_code, price_gift_card, first_name, last_name).deliver_later
+
+                order_id = params[:name]
+                order_id = order_id[1..order_id.length]
+
+                GiftcardMailer.send_gift_card_email(
+                    params[:email], giftcard.gift_card_code, price_gift_card, first_name, last_name, order_id).deliver_later
 
                 giftcardused = GiftCardUsed.new
                 giftcardused.email = params[:email]
