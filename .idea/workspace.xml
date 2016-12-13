@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="17983af2-952d-4f34-a41d-33d68a79965c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/giftcard_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/giftcard_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb" afterPath="$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb" />
     </list>
     <ignored path="Shopify-API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,16 +36,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="giftcard_mailer.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/mailers/giftcard_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="shopify_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/shopify_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,6 +61,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="206" column="51" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="giftcard_mailer.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/mailers/giftcard_mailer.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -566,12 +565,12 @@
       <workItem from="1481251367861" duration="913000" />
       <workItem from="1481256076804" duration="6887000" />
       <workItem from="1481510260876" duration="8640000" />
-      <workItem from="1481623117545" duration="1231000" />
+      <workItem from="1481623117545" duration="1752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107508000" />
+    <option name="totallyTimeSpent" value="108029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -962,14 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="206" column="51" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/shopify_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -978,9 +969,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/giftcard_mailer/send_gift_card_email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="206" column="51" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/giftcard_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="221">
           <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding />
         </state>
