@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   namespace :api do
     match 'shopify/request-gift-card' => 'Shopify/request_gift_card', via: [:options, :post]
   end
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end

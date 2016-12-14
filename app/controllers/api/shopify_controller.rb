@@ -13,7 +13,7 @@ class Api::ShopifyController < ApplicationController
     data = request.body.read
     verified = verify_webhook(data, env["HTTP_X_SHOPIFY_HMAC_SHA256"])
 
-    if verified == true
+    if verified
       shopify = Shopify.where({ :hmac_header => request.headers['X-Shopify-Order-Id'] }).first
       if shopify.nil?
         shopify = Shopify.new
@@ -42,6 +42,8 @@ class Api::ShopifyController < ApplicationController
                                                            price_gift_card).deliver_later
             end
 
+            tax_rate = li[:tax_lines].length > 0 ? li[:tax_lines][0][:rate].to_f : 0
+
             (1..quantity).each do
               giftcard = GiftCard.where({ :used => false, :price => price_gift_card }).first
               if giftcard.present?
@@ -51,8 +53,30 @@ class Api::ShopifyController < ApplicationController
                 order_id = params[:name]
                 order_id = order_id[1..order_id.length]
 
+                currency = params[:currency]
+                currency_symbol = '$'
+                case currency
+                  when 'GBP'
+                    currency_symbol = '£'
+                  when 'EUR'
+                    currency_symbol = '€'
+                  else
+                    currency_symbol = '$'
+                end
+
+                tax_included = params[:taxes_included]
+                tax_string = ''
+                if tax_included
+                  tax_string = 'all taxes are inclusive' if currency == 'USD' || currency == 'EUR'
+                  if currency == 'EUR' && tax_rate > 0
+                    tax_value = price_gift_card.to_f * tax_rate.to_f / (1 + tax_rate.to_f)
+                    tax_string = "includes #{currency_symbol}#{number_with_precision(tax_value, :precision => 2, :delimiter => ',')} in taxes"
+                  end
+                end
+
+                formatted_price = tax_string.blank? ? "#{currency_symbol}#{price_gift_card}" : "#{currency_symbol}#{price_gift_card} (#{tax_string})"
                 GiftcardMailer.send_gift_card_email(
-                    params[:email], giftcard.gift_card_code, price_gift_card, first_name, last_name, order_id).deliver_later
+                    params[:email], giftcard.gift_card_code, formatted_price, first_name, last_name, order_id).deliver_later
 
                 giftcardused = GiftCardUsed.new
                 giftcardused.email = params[:email]
@@ -117,6 +141,6 @@ class Api::ShopifyController < ApplicationController
         return true
       end
     end
-    return false
+    false
   end
 end

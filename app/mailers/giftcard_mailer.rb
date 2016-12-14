@@ -5,7 +5,8 @@ class GiftcardMailer < ApplicationMailer
     @client = Client.new
     @client.email = email
     @client.gift_card_code = gift_card_code
-    @client.price = price_gift_card
+    #@client.price = price_gift_card
+    @price = price_gift_card
     @client.first_name = first_name
     @order_id = order_id
 
