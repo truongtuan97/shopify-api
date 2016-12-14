@@ -11,7 +11,7 @@ class Api::ShopifyController < ApplicationController
   def request_gift_card
     request.body.rewind
     data = request.body.read
-    verified = verify_webhook(data, env["HTTP_X_SHOPIFY_HMAC_SHA256"])
+    verified = verify_webhook(data, request.headers["HTTP_X_SHOPIFY_HMAC_SHA256"])
 
     if verified
       shopify = Shopify.where({ :hmac_header => request.headers['X-Shopify-Order-Id'] }).first
@@ -51,7 +51,7 @@ class Api::ShopifyController < ApplicationController
                 last_name = params[:customer][:last_name]
 
                 order_id = params[:name]
-                order_id = order_id[1..order_id.length]
+                order_id = order_id.gsub('#','')
 
                 currency = params[:currency]
                 currency_symbol = '$'
@@ -68,8 +68,9 @@ class Api::ShopifyController < ApplicationController
                 tax_string = ''
                 if tax_included
                   tax_string = 'all taxes are inclusive' if currency == 'USD' || currency == 'EUR'
-                  if currency == 'EUR' && tax_rate > 0
-                    tax_value = price_gift_card.to_f * tax_rate.to_f / (1 + tax_rate.to_f)
+                  if currency == 'GBP' && tax_rate > 0
+                    tax_value = li[:tax_lines].length > 0 ? li[:tax_lines][0][:price].to_f : 0
+                    tax_value = price_gift_card.to_f * tax_rate.to_f / (1 + tax_rate.to_f) if tax_value <= 0
                     tax_string = "includes #{currency_symbol}#{number_with_precision(tax_value, :precision => 2, :delimiter => ',')} in taxes"
                   end
                 end
