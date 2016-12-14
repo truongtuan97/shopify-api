@@ -136,6 +136,7 @@ class Api::ShopifyController < ApplicationController
 
   def verify_webhook(data, hmac_header)
     digest  = OpenSSL::Digest::Digest.new('sha256')
+    include ActionView::Helpers::NumberHelper
     SHARED_SECRET.each do |ss|
       calculated_hmac = Base64.encode64(OpenSSL::HMAC.digest(digest, ss, data)).strip
       if calculated_hmac == hmac_header
