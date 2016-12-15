@@ -19,3 +19,11 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+/.idea
+/.idea/*
+test__Shopify_API.xml
+Development__Shopify_API.xml
+spec__Shopify_API.xml
+Shopify-API.iml
+Production__Shopify_API.xml
+workspace.xml
