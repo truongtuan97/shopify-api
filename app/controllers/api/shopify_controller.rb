@@ -28,7 +28,7 @@ class Api::ShopifyController < ApplicationController
         have_gift_card = false
 
         params[:line_items].each do |li|
-          if li[:title].casecmp("LES MILLS ON DEMANDTM GIFT SUBSCRIPTION") == 0
+          if li[:title].include?("12 MONTH GIFT SUBSCRIPTION")
             if have_gift_card == false
               have_gift_card = true
             end
