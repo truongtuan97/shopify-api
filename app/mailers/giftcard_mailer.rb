@@ -28,7 +28,7 @@ class GiftcardMailer < ApplicationMailer
     end
 
     attachments['LES MILLS On Demand - Gift Certificate with Activation Code.pdf'] = File.read(file_name)
-    mail to: @client.email, bcc: 'lmod@lesmills.com', subject: "Thank you for ordering a 12-month gift subscription to LES MILLS On Demand."
+    mail to: @client.email, bcc: 'quoc.nguyen@texodesign.com', subject: "Thank you for ordering a 12-month gift subscription to LES MILLS On Demand."
   end
 
   def send_notifies_gift_card_empty(email, gift_card_code, price_gift_card)
