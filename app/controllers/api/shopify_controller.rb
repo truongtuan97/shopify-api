@@ -3,8 +3,7 @@ require 'openssl'
 
 class Api::ShopifyController < ApplicationController
   include ActionView::Helpers::NumberHelper
-  SHARED_SECRET = ['99fa0471893dc4cc110f731382e5bb77c686f13d367e57e260dd2b928880f9c8',
-                   'd6cbfb83bf88f785964a62aeaceb98dbbecf404cd240cbea446a07ff54f3159d',
+  SHARED_SECRET = ['d6cbfb83bf88f785964a62aeaceb98dbbecf404cd240cbea446a07ff54f3159d',
                    '725a78c19f2cd5b727d6c2cce91604d771e5337022dcd523805df197517a7089',
                    '8a0ec305419987e7543e594bf0549e4c989747870e15ca3cdfa7ab831228ab5e']
 
