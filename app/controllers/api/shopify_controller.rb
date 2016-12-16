@@ -38,7 +38,7 @@ class Api::ShopifyController < ApplicationController
             #send email notify empty gift card
             arr_gift_cards = GiftCard.where({ :used => false, :price => price_gift_card })
             if arr_gift_cards.present? && arr_gift_cards.length < 50
-              GiftcardMailer.send_notifies_gift_card_empty("quoc.nguyen@texodesign.com", arr_gift_cards.length,
+              GiftcardMailer.send_notifies_gift_card_empty("lmod@lesmills.com", arr_gift_cards.length,
                                                            price_gift_card).deliver_later
             end
 
