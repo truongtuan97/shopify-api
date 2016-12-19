@@ -43,7 +43,7 @@ class GiftcardMailer < ApplicationMailer
   def send_notifies_purchase_maded(p_created_at, p_processed_at, p_created_from, name_quantities, total_line_items_price,
     customer_name, customer_address, customer_email, customer_phone)
 
-    mail_to = 'quoc.nguyen@texodesign.com'
+    mail_to = 'support@lesmillsondemand.com'
     @p_created_at = p_created_at
     @p_processed_at = p_processed_at
     @p_created_from = p_created_from
