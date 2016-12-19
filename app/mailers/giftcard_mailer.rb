@@ -54,6 +54,6 @@ class GiftcardMailer < ApplicationMailer
     @customer_email = customer_email
     @customer_phone = customer_phone
 
-    mail to: mail_to, subject: "Notifies purchase has been maded"
+    mail to: mail_to, subject: "Shopify notification – a purchase has been made"
   end
 end
