@@ -35,23 +35,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'http://shopify-api.stagingtd.com/' }
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
-=begin
+
   config.action_mailer.smtp_settings = {
       :address              => "server-1029.wphosting.com.au",
       :port                 => 587,
-      :user_name            => "no-reply@texodesign.com.au",
-      :password             => "Texod3s1gn",
+      :user_name            => "user-name",
+      :password             => "password",
       :authentication       => "plain",
-      :enable_starttls_auto => true
-  }
-=end
-
-  config.action_mailer.smtp_settings = {
-      :address              => "smtp.office365.com",
-      :port                 => 587,
-      :user_name            => "smtp.relay@lesmills.com",
-      :password             => "Office365",
-      :authentication       => "login",
       :enable_starttls_auto => true
   }
 
